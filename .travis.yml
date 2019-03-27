@@ -1,0 +1,13 @@
+sudo: required
+dist: trusty
+language: python
+python:
+  - "3.6"
+
+install:
+  - pip3 install -r requirements.txt
+  - pip3 install http://download.pytorch.org/whl/cpu/torch-1.0.0-cp36-cp36m-linux_x86_64.whl
+  - pip3 install torchvision
+
+script:
+  - python3 -m test
